@@ -1,0 +1,404 @@
+/*General initial settings such as background color of the page and removing link's default design*/
+body {
+	background-color: #f2f2f2;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+/*CSS design for list of projects such as right side positioning, font styles, 3d rotation, color change when hovered*/
+.commlabProjects {
+	position: relative;
+    width: 100%;
+    perspective: 100vw;
+    margin: 0;
+	padding-left: 0;
+	list-style: none;
+	text-align: right;
+	transform-style: preserve-3d;
+}
+
+.projectContainer {
+	transform: rotateY(-45deg) translateZ(0) scale(1);
+	transform-origin: right center;
+	transform-style: preserve-3d;
+	will-change: transform; 
+}
+
+.projectContainer:hover {
+    transform: rotateX(5deg);
+}
+
+.projectContainer a {
+	position: relative;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-size: 9.6vw;
+	letter-spacing: .03em;
+	line-height: .9em;
+}
+
+.projectContainer a:hover {
+	color: #e30085;
+	text-shadow: 2px 2px 2px #000 ;
+}
+
+
+/*.commlabProjects {
+	#projectContainer {
+	    opacity: 0;
+	    transform: translateY(-101%);
+	    animation: slideUpFadeIn 1s 0.4s forwards;
+	}
+
+	#projectContainer:nth-child(1) {
+	    animation-delay: 0.6s;
+	}
+
+	#projectContainer:nth-child(2) {
+	    animation-delay: 0.8s;
+	}
+
+	#projectContainer:nth-child(3) {
+	    animation-delay: 1.0s;
+	}
+
+	#projectContainer:nth-child(4) {
+	    animation-delay: 1.2s;
+	}
+}
+@keyframes slideUpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+*/
+
+
+/*CSS design for bottom navigation bar and logo*/
+.navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.navBar #logo {
+    font-family: Monoton;
+    font-size: 40px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-left: 90px;
+}
+
+.navBar #logo span {
+	line-height: 1;
+}
+
+.navBar #logo:hover{
+ 	@supports ((-webkit-text-stroke: 1px #000) or (text-stroke: 1px #000)) {
+		-webkit-text-stroke: 1px #000; 
+		text-stroke: 1px #000;
+	}
+}
+
+.navBar .profession {
+    font-family: Montserrat;
+    margin-left: 90px;
+}
+
+
+/*.navBar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+}*/
+
+/*.navBar .logo {
+	font-family: Monoton;
+	display: block;
+	position: absolute;
+	bottom: 100px;
+	left: 90px;
+	z-index: 1;
+	font-size: 40px;
+	text-decoration: none;
+}
+*/
+
+/*.navBar .profession {
+	position: relative;
+	font-family: Montserrat;
+	margin-top: 20px;
+}*/
+
+.navBar ul {
+	margin: 0;
+	padding-left: 30px;
+	list-style-type: none;  /*removing bullet points*/
+}
+
+.navBar li {  /*the space between lines*/
+	margin-bottom: 2px;
+}
+
+.navBar {
+	.info, .contact, .social, .left, .right {
+		display: flex;
+	}
+
+	.left {
+		width: 70%;
+		align-items: flex-end;
+	}
+}
+
+.navBar .info {
+	justify-content: space-between;
+	font-size: 18px;
+	font-family: Montserrat;
+	align-items: flex-end;
+	width: 100vw;
+	padding: 2.5vh 60px 3vh;
+	transition: opacity 0.2s ease-in-out;
+	
+	.contact .email:hover {
+		transform: rotate3d(0, 1, 0, 15deg) translateZ(0);
+		}
+
+	.contact .email {
+		display: inline-block;
+	}
+}
+
+.navBar .links {
+	.about-li:hover, .journal-li:hover {
+		cursor: pointer;
+		transform: rotate3d(0, 1, 0, 25deg) translateZ(0);
+	}
+}
+
+.navBar .social {
+	.content:hover {
+		display: flex;
+		cursor: pointer;
+		transform: rotate3d(0, 1, 0, 25deg) translateZ(0);
+	}
+}
+
+.color-mode {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 95px;
+	margin-bottom: 15px;
+}
+
+.color-mode button {
+	cursor: pointer;
+	padding: 10px 10px;
+	margin-right: 10px;
+	outline: 1px;
+}
+
+/* Animations */
+
+/* Fade In */
+
+.fadeIn {
+	opacity: 0;
+	animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Slide Up */
+
+.slideUp {
+	display: block;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.navBar {
+
+	.profession, .contact, .links, .social, .credits, .color-mode{
+		opacity: 0;
+		transform: translateY(-101%);
+		animation: slideUpFadeIn 1s 0.4s forwards;
+	}
+
+	#logo {
+		opacity: 0;
+		transform: translateY(-101%);
+		animation: slideUpFadeIn 1s 0.4s forwards;
+	}
+
+
+	.profession {
+		animation-delay: 0.6s;
+	}
+
+	.contact {
+		animation-delay: 0.6s;
+	}
+
+	.links  {
+		animation-delay: 1s;
+	}
+
+	.social {
+		animation-delay: 1.2s;
+	}
+
+}
+
+@keyframes slideUpFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+
+#popUpOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.about .container {
+	max-width: 1200px;
+    margin: 0 auto;
+	background: #f2f2f2;
+    padding: 50px;
+    border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.about .left {
+	width: 45%;
+	padding-left: 50px;
+	padding-right: 10px;
+	font-size: 25px;
+	line-height: 1.2em;
+	color: #000
+}
+
+.about .right {
+	width: 55%;
+	display: flex;
+	justify-content: space-between
+}
+
+.about .col-1, .col-2 {
+/*	display: flex;*/
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	width: 50%;
+	margin-bottom: 30px
+}
+
+.about .info {
+	width: 100%;
+	padding-bottom: 30px
+}
+
+.about .close-button {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.about .btn-back {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.about .about-photo {
+	object-fit: cover; 
+    width: 250px; 
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.about .heading {
+	display: block;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about .title {
+    color: #555;
+}
+
+/* Reset some default styles */
+.about p {
+	font-family: Montserrat;
+	font-size: 15px;
+	margin-bottom: 5px
+}
+
+.about h2, h3, ul {
+    font-family: Montserrat;
+}
+
+.about h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about li {
+    margin-bottom: 5px;
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy|Raleway|Questrial|Montserrat|Monoton">
+	<title>Aruzhan Bolatova</title>
+</head>
+<body>
+
+	<header class="navBar" id="content">
+		<div class="color-mode">
+			<button class="night-mode" aria-label="Night Color Mode" style="background-color: black" onclick="NightMode()"></button>
+			<button class="light-mode" aria-label="Light Color Mode" style="background-color: whitesmoke" onclick="LightMode()"></button>
+			<button class="ultra-mode" aria-label="Ultra Color Mode" style="background-color: #57068c" onclick="UltraMode()"></button>
+		</div>
+		<a class="content" id="logo" href="C:\Users\bolat\OneDrive\Рабочий стол\comm lab html\portfolio final\index.html">
+			<span class="slideUp">
+                ARUZHAN <br> BOLATOVA
+           	</span>
+        </a>
+        <div class="profession"> Computer Scientist | Web Developer</div>
+        <div class="info">
+        	<div class="left">
+        		<div class="contact">
+                    <ul>
+                        <li>NYU Abu Dhabi, UAE</li>
+                        <li class="email" id="content">
+                            <a  class="content" href="mailto:ab10028@nyu.edu">
+                                <strong>ab10028@nyu.edu</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <nav class="links" id="content">
+                    <ul>
+                        <li class="about-li" onclick="showPopup()"><strong>01</strong> about</li>
+                        <li class="journal-li" id="content">
+                            <a class="content" href="file:///C:/Users/bolat/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/comm%20lab%20html/portfolio%20final/journal.html"> <strong>02</strong> all projects
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="social">
+                    <ul>
+                        <li>
+                            <a class="content" href="https://github.com/aruzhan-bolatova"> <strong>03</strong> github</a>
+                        </li>
+                        <li>
+                            <a class="content" href="https://www.linkedin.com/in/aruzhan-bolatova/"><strong>04</strong> linkedin</a>
+                        </li>
+                    </ul>
+                </nav>
+        	</div>
+        </div>
+	</header>
+
+	<div class="commlabProjects" id="content">
+		<div class="projectContainer" id="projectContainer">
+			<a class="content1" href="https://aruzhan-bolatova.github.io/"> 30 MFF <br> Website</a>
+		</div>
+		<br>
+		<div class="projectContainer" id="projectContainer">
+			<a class="content1" href="https://aruzhan-bolatova.github.io/aru-diana-sara-comics.github.io/"> Interactive <br> Comics</a>
+		</div>
+		<br>
+		<div class="projectContainer" id="projectContainer">
+			<a class="content1" href="https://aruzhan-bolatova.github.io/group3-soundproject.github.io/"> Sound <br> Project</a>
+		</div>
+		<br>
+		<div class="projectContainer" id="projectContainer">
+			<a  class="content1"href="https://aruzhan-bolatova.github.io/video-project.github.io/"> Video <br> Project</a>
+		</div>
+	</div>
+
+	<section class="about" id="popUpOverlay">
+            <button class="btn-back" type="button" aria-label="Back" onclick="closePopup()">
+                    <span class="close-button" onclick="closePopup()">&times;</span>
+            </button>
+            <div class="container">
+            	<img class="about-photo" src="images/about.png">
+                <div class="left">  	
+                    <h2 class="heading">About Me</h2>
+                    <p> <strong>Hi, I am Aru.</strong> </p>
+                    <p> I am pursuing BSc in Computer Science, with a concentration in Bioinformatics and Machine Learning for Computitional Biology at New York University Abu Dhabi. </p>
+                    <p> Recently, I am also interested in Web Development and Game Development and <strong>this portfolio</strong> is dedicated for that. </p>
+                </div>
+                <div class="right">
+                    <div class="col-1">
+                        <div class="info">
+                            <h3 class="heading">Major</h3>
+                            <h4 class="title"> BS Computer Science</h4>
+                            <h3 class="heading">Minor</h3>
+                            <h4 class="title">Natural Science & Applied Math</h4>
+                        </div>
+                        <div class="info">
+                            <h3 class="heading">Related Courses</h3>
+                            <ul>
+                                <li>Introduction to CS</li>
+                                <li>Discrete Math</li>
+                                <li>Communications Lab</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="info">
+                            <h3 class="heading">Programming Langugaes</h3>
+                            <ul>
+                                <li>Python (Processing)</li>
+                                <li>HTML / CSS / JavaScript</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info">
+                            <h3 class="heading">Related Skills</h3>
+                            <ul>
+                                <li>Git</li>
+                                <li>Adobe Photoshop, Illustrator, Primiere Pro</li>
+                                <li>Audacity</li>
+                                <li>Canva</li>
+                                <li>Working with audion and video equipment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	<script src="script.js"></script>
+</body>
+</html>
